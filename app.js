@@ -56,3 +56,26 @@ setInterval(() => {
       document.querySelector("#song").src = `./Songs/s${id}.mp3`;
       document.querySelector("#art").src = `./Image/i${id}.jpg`;
     }
+  }
+  
+    function selectScreen(s) {
+      setOff();
+      let icons = document.querySelector(".icons").childNodes;
+      switch(s){
+        case 0:
+          document.querySelector(".time").style.display="flex";
+          break;
+        case 1:
+          document.querySelector(".sms").style.display="flex";
+          icons[s].style.opacity=1;
+          break;
+        case 3:
+          document.querySelector(".media").style.display="flex";
+          icons[s].style.opacity=1;
+          break;
+      }
+    }
+    function selectSong(id) {
+      document.querySelector("#song").src = `./Songs/s${id}.mp3`;
+      document.querySelector("#art").src = `./Image/i${id}.jpg`;
+    }
